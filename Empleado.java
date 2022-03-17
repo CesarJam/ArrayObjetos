@@ -72,34 +72,7 @@ public class Empleado {
          this.edad=0;
          this.tiempoTrabajado=0;
      }
-    public void agregarInformacion(Empleado arrayEmpleados[])
-    {
-        for (int i = 0; i < arrayEmpleados.length; i++)
-                {
-                    nombre=JOptionPane.showInputDialog("Ingresa el nombre del empleado No "+(i+1));
-                    
-                    Object sexoSeleccionar = JOptionPane.showInputDialog(null, "Seleccione el sexo",
-                            "Sexo", JOptionPane.QUESTION_MESSAGE, null,
-                            new Object[]{"Hombre", "Mujer"}, "Seleccione");
-                        sexo=sexoSeleccionar.toString();
-                        
-                    Object departamentoSeleccionar = JOptionPane.showInputDialog(null, "Seleccione el departamento",
-                            "Sexo", JOptionPane.QUESTION_MESSAGE, null,
-                            new Object[]{"Compras", "Contabilidad","Control de calidad","Ingenieria"}, "Seleccione");
-                        departamento=departamentoSeleccionar.toString();
-                        
-                    do {                            
-                        edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la edad (mayor a 17 y menor a 51)"));
-                        } while (!(edad>=18 && edad<=50));
-                    
-                    do {                            
-                        tiempoTrabajado = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la antiguedad (mayor o igual a cero)"));
-                        } while ((0>=tiempoTrabajado));
-                    
-                    
-                    arrayEmpleados[i] = new Empleado(nombre, sexo, departamento, edad, tiempoTrabajado);
-                }
-    }
+    
 
     @Override
     public String toString() {
