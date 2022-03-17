@@ -55,7 +55,7 @@ public class POO {
                         sexo = sexoSeleccionar.toString();
 
                         Object departamentoSeleccionar = JOptionPane.showInputDialog(null, "Seleccione el departamento",
-                                "Sexo", JOptionPane.QUESTION_MESSAGE, null,
+                                "Departamendo", JOptionPane.QUESTION_MESSAGE, null,
                                 new Object[]{"Compras", "Contabilidad", "Control de calidad", "Ingenieria"}, "Seleccione");
                         departamento = departamentoSeleccionar.toString();
 
@@ -128,6 +128,7 @@ public class POO {
                     int indiceDeMayorAntiguedad = 0;
                     for (int i = 0; i < arrayEmpleados.length; i++) {
                         if (mayorAntiguedad <= arrayEmpleados[i].getTiempoTrabajado()) {
+                            mayorAntiguedad=arrayEmpleados[i].getTiempoTrabajado();
                             indiceDeMayorAntiguedad = i;
                         }
                     }
